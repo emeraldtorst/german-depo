@@ -1,387 +1,938 @@
-<!DOCTYPE HTML>
-<!--
-	Helios by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Helios by HTML5 UP</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="homepage is-preload">
-		<div id="page-wrapper">
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bernadette König | Professional Cellist</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Link to your custom CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark:bg-gray-900 dark:text-white relative">
+    <!-- Loading Screen -->
+    <div class="page-transition">
+        <div class="loading-circle"></div>
+    </div>
 
-			<!-- Header -->
-				<div id="header">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 glass-effect dark:bg-gray-900/90">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center">
+                    <h1 class="text-2xl font-bold text-accent dark:text-white">Bernadette König</h1>
+                </div>
+                <div class="hidden md:block">
+                    <ul class="flex space-x-8">
+                        <li><a href="#home" class="nav-link text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent font-medium transition duration-300">Home</a></li>
+                        <li><a href="#about" class="nav-link text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent font-medium transition duration-300">About</a></li>
+                        <li><a href="#music" class="nav-link text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent font-medium transition duration-300">Music</a></li>
+                        <li><a href="#concerts" class="nav-link text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent font-medium transition duration-300">Concerts</a></li>
+                        <li><a href="#lessons" class="nav-link text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent font-medium transition duration-300">Lessons</a></li>
+                        <li><a href="#contact" class="nav-link text-gray-700 dark:text-gray-300 hover:text-accent dark:hover:text-accent font-medium transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <button id="theme-toggle" class="p-2 rounded-full bg-white/70 dark:bg-gray-800 shadow-md hover:shadow-lg transition duration-300">
+                        <i class="fas fa-sun dark:hidden text-yellow-500"></i>
+                        <i class="fas fa-moon hidden dark:inline text-indigo-300"></i>
+                    </button>
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="p-2 rounded-full bg-white/70 dark:bg-gray-800 shadow-md hover:shadow-lg transition duration-300">
+                            <i class="fas fa-bars"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white dark:bg-gray-800 shadow-lg rounded-b-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Home</a>
+                <a href="#about" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">About</a>
+                <a href="#music" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Music</a>
+                <a href="#concerts" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Concerts</a>
+                <a href="#lessons" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Lessons</a>
+                <a href="#contact" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-					<!-- Inner -->
-						<div class="inner">
-							<header>
-								<h1><a href="index.html" id="logo">Bernadette Koenig</a></h1>
-								<hr />
-								<p>For my wife</p>
-							</header>
-							<footer>
-								<a href="#banner" class="button circled scrolly">Start</a>
-							</footer>
-						</div>
+    <!-- Hero Section -->
+    <section id="home" class="relative h-screen flex items-center justify-center overflow-hidden">
+        <video autoplay loop muted playsinline class="hero-video absolute w-full h-full object-cover">
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-cellist-performing-classical-music-12112-large.mp4" type="video/mp4">
+        </video>
+        <div class="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-70"></div>
+        <div class="hero-content relative z-10 text-center px-4 max-w-4xl mx-auto animate-on-scroll">
+            <h1 class="text-5xl md:text-7xl font-bold text-white mb-6">Bernadette König</h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-8">Passion. Precision. Perfection. Experience the transformative power of the cello.</p>
+            <div class="flex justify-center space-x-4">
+                <a href="#concerts" class="px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition duration-300 transform hover:scale-105">Upcoming Concerts</a>
+                <a href="#music" class="px-6 py-3 bg-white text-gray-800 rounded-full font-medium hover:bg-gray-100 transition duration-300 transform hover:scale-105">Listen Now</a>
+            </div>
+        </div>
+        <a href="#about" class="absolute bottom-10 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+    </section>
 
-					<!-- Nav -->
-						<nav id="nav">
-							<ul>
-								<li><a href="index.html">Home</a></li>
-								<li>
-									<a href="#">Dropdown</a>
-									<ul>
-										<li><a href="#">Lorem ipsum dolor</a></li>
-										<li><a href="#">Magna phasellus</a></li>
-										<li><a href="#">Etiam dolore nisl</a></li>
-										<li>
-											<a href="#">And a submenu &hellip;</a>
-											<ul>
-												<li><a href="#">Lorem ipsum dolor</a></li>
-												<li><a href="#">Phasellus consequat</a></li>
-												<li><a href="#">Magna phasellus</a></li>
-												<li><a href="#">Etiam dolore nisl</a></li>
-											</ul>
-										</li>
-										<li><a href="#">Veroeros feugiat</a></li>
-									</ul>
-								</li>
-								<li><a href="left-sidebar.html">Left Sidebar</a></li>
-								<li><a href="right-sidebar.html">Right Sidebar</a></li>
-								<li><a href="no-sidebar.html">No Sidebar</a></li>
-							</ul>
-						</nav>
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">About Bernadette</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-12"></div>
+            </div>
 
-				</div>
+            <div class="flex flex-col md:flex-row items-center gap-12 mb-20">
+                <div class="w-full md:w-1/2 animate-on-scroll">
+                    <div class="relative overflow-hidden rounded-2xl shadow-xl">
+                        <img src="https://images.unsplash.com/photo-1602992708529-c9fdb12905c9?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Bernadette playing cello" class="w-full h-full object-cover transform hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-gray-900/70 via-transparent to-transparent"></div>
+                        <div class="absolute bottom-0 left-0 p-6 text-white">
+                            <p class="text-xl font-medium">"Music is the divine way to tell beautiful, poetic things to the heart."</p>
+                            <p class="text-sm mt-2">- Pablo Casals</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-full md:w-1/2 animate-on-scroll">
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">A Musical Journey</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-4">Born in Vienna to a family of musicians, Bernadette König began her musical education at the age of five. By twelve, she was accepted into the prestigious Vienna Conservatory, where she studied under the tutelage of Maestro Gustav Lehmann.</p>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Today, Bernadette is celebrated as one of the most expressive and technically brilliant cellists of her generation, with performances that seamlessly blend classical precision with contemporary sensibility.</p>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="p-4 bg-white/80 dark:bg-gray-700/80 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-lg text-accent mb-2">Education</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">Vienna Conservatory, Juilliard School, Royal College of Music</p>
+                        </div>
+                        <div class="p-4 bg-white/80 dark:bg-gray-700/80 rounded-lg shadow-sm">
+                            <h4 class="font-bold text-lg text-accent mb-2">Instruments</h4>
+                            <p class="text-sm text-gray-600 dark:text-gray-300">1699 Giovanni Grancino Cello "The Aurora"</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-			<!-- Banner -->
-				<section id="banner">
-					<header>
-						<h2>Hi. You're looking at <strong>Helios</strong>.</h2>
-						<p>
-							A (free) responsive site template by <a href="http://html5up.net">HTML5 UP</a>.
-							Built with HTML5/CSS3 and released under the <a href="http://html5up.net/license">CCA</a> license.
-						</p>
-					</header>
-				</section>
+            <!-- Timeline -->
+            <div class="mt-16 animate-on-scroll">
+                <h3 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-12">Career Milestones</h3>
+                <div class="relative max-w-3xl mx-auto">
+                    <div class="timeline-item relative pl-12 mb-12">
+                        <div class="absolute left-0 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent border-4 border-white dark:border-gray-900 flex items-center justify-center">
+                            <i class="fas fa-music text-white"></i>
+                        </div>
+                        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                            <h4 class="font-bold text-xl text-gray-800 dark:text-white mb-2">2025 - Solo Debut at Carnegie Hall</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Performed Dvořák's Cello Concerto to critical acclaim with the New York Philharmonic under the baton of Maestro Andris Nelsons.</p>
+                        </div>
+                    </div>
 
-			<!-- Carousel -->
-				<section class="carousel">
-					<div class="reel">
+                    <div class="timeline-item relative pl-12 mb-12">
+                        <div class="absolute left-0 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent border-4 border-white dark:border-gray-900 flex items-center justify-center">
+                            <i class="fas fa-award text-white"></i>
+                        </div>
+                        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                            <h4 class="font-bold text-xl text-gray-800 dark:text-white mb-2">2023 - ECHO Klassik Award</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Received the prestigious ECHO Klassik Award for "Best Instrumentalist of the Year" for her album "Bach: The Cello Suites."</p>
+                        </div>
+                    </div>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pulvinar sagittis congue</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+                    <div class="timeline-item relative pl-12 mb-12">
+                        <div class="absolute left-0 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent border-4 border-white dark:border-gray-900 flex items-center justify-center">
+                            <i class="fas fa-record-vinyl text-white"></i>
+                        </div>
+                        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                            <h4 class="font-bold text-xl text-gray-800 dark:text-white mb-2">2021 - Deutsche Grammophon Recording</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Signed exclusive recording contract with Deutsche Grammophon, releasing her debut album "Nocturnes."</p>
+                        </div>
+                    </div>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Fermentum sagittis proin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+                    <div class="timeline-item relative pl-12">
+                        <div class="absolute left-0 transform -translate-x-1/2 w-8 h-8 rounded-full bg-accent border-4 border-white dark:border-gray-900 flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-white"></i>
+                        </div>
+                        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                            <h4 class="font-bold text-xl text-gray-800 dark:text-white mb-2">2018 - Juilliard Graduation</h4>
+                            <p class="text-gray-600 dark:text-gray-300">Graduated with honors from The Juilliard School, where she studied with celebrated cellist Joel Krosnick.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+    <!-- Music & Media Section -->
+    <section id="music" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Music & Media</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-12"></div>
+            </div>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+            <!-- Audio Player -->
+            <div class="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden mb-16 animate-on-scroll">
+                <div class="audio-player p-8">
+                    <div class="flex flex-col md:flex-row items-center">
+                        <div class="w-full md:w-1/3 mb-6 md:mb-0">
+                            <img src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=1000&q=80" alt="Album Cover" class="rounded-lg w-full h-auto shadow-md album-cover">
+                        </div>
+                        <div class="w-full md:w-2/3 md:pl-8">
+                            <h3 class="text-2xl font-bold text-gray-800 dark:text-white mb-2">Nocturnes (2023)</h3>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4">Featuring works by Fauré, Pärt, and contemporary composers</p>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Varius magnis sollicitudin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+                            <div class="mt-6">
+                                <div class="flex items-center justify-between mb-2">
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">0:00</span>
+                                    <span class="text-sm text-gray-500 dark:text-gray-400">4:32</span>
+                                </div>
+                                <div class="relative h-2 bg-gray-200 dark:bg-gray-700 rounded-full mb-4">
+                                    <div class="absolute h-2 bg-accent rounded-full w-1/3" id="audio-progress-bar"></div>
+                                </div>
+                            </div>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Pulvinar sagittis congue</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+                            <div class="flex items-center justify-between">
+                                <button class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                                    <i class="fas fa-backward text-gray-700 dark:text-white"></i>
+                                </button>
+                                <button id="play-pause-button" class="p-4 rounded-full bg-accent text-white hover:bg-accent/90">
+                                    <i class="fas fa-play text-xl"></i>
+                                </button>
+                                <button class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                                    <i class="fas fa-forward text-gray-700 dark:text-white"></i>
+                                </button>
+                                <button class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                                    <i class="fas fa-random text-gray-700 dark:text-white"></i>
+                                </button>
+                                <button class="p-3 rounded-full bg-gray-100 dark:bg-gray-700 hover:bg-gray-200 dark:hover:bg-gray-600">
+                                    <i class="fas fa-redo text-gray-700 dark:text-white"></i>
+                                </button>
+                            </div>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Fermentum sagittis proin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+                            <div class="mt-6 flex space-x-4">
+                                <button class="px-4 py-2 bg-gray-800 text-white rounded-full text-sm hover:bg-gray-700 dark:hover:bg-gray-600">
+                                    <i class="fab fa-apple mr-2"></i> Apple Music
+                                </button>
+                                <button class="px-4 py-2 bg-green-600 text-white rounded-full text-sm hover:bg-green-700">
+                                    <i class="fab fa-spotify mr-2"></i> Spotify
+                                </button>
+                                <button class="px-4 py-2 bg-blue-500 text-white rounded-full text-sm hover:bg-blue-600">
+                                    <i class="fab fa-youtube mr-2"></i> YouTube
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+            <!-- Video Gallery -->
+            <div class="animate-on-scroll">
+                <h3 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Performance Videos</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="relative pb-[56.25%]">
+                            <img src="https://i.ytimg.com/vi/6JQm5aSjX6g/maxresdefault.jpg" alt="Video thumbnail" class="absolute w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                <button class="w-16 h-16 rounded-full bg-white/80 hover:bg-white transition duration-300 flex items-center justify-center">
+                                    <i class="fas fa-play text-accent text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white dark:bg-gray-800">
+                            <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Dvořák Cello Concerto</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Berlin Philharmonic • 2024</p>
+                        </div>
+                    </div>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Ultrices urna sit lobortis</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="relative pb-[56.25%]">
+                            <img src="https://i.ytimg.com/vi/yY8ak2hqwzQ/maxresdefault.jpg" alt="Video thumbnail" class="absolute w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                <button class="w-16 h-16 rounded-full bg-white/80 hover:bg-white transition duration-300 flex items-center justify-center">
+                                    <i class="fas fa-play text-accent text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white dark:bg-gray-800">
+                            <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Bach Cello Suite No.1</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Live at Vienna Musikverein • 2023</p>
+                        </div>
+                    </div>
 
-						<article>
-							<a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-							<header>
-								<h3><a href="#">Varius magnis sollicitudin</a></h3>
-							</header>
-							<p>Commodo id natoque malesuada sollicitudin elit suscipit magna.</p>
-						</article>
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="relative pb-[56.25%]">
+                            <img src="https://i.ytimg.com/vi/4Tr0otuiQuU/maxresdefault.jpg" alt="Video thumbnail" class="absolute w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                <button class="w-16 h-16 rounded-full bg-white/80 hover:bg-white transition duration-300 flex items-center justify-center">
+                                    <i class="fas fa-play text-accent text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white dark:bg-gray-800">
+                            <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">The Swan (Saint-Saëns)</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Live Recording • 2022</p>
+                        </div>
+                    </div>
 
-					</div>
-				</section>
+                    <div class="overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:-translate-y-1">
+                        <div class="relative pb-[56.25%]">
+                            <img src="https://i.ytimg.com/vi/0B2qNUc5h2Q/maxresdefault.jpg" alt="Video thumbnail" class="absolute w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black/30 flex items-center justify-center">
+                                <button class="w-16 h-16 rounded-full bg-white/80 hover:bg-white transition duration-300 flex items-center justify-center">
+                                    <i class="fas fa-play text-accent text-xl"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="p-4 bg-white dark:bg-gray-800">
+                            <h4 class="font-bold text-lg text-gray-800 dark:text-white mb-1">Behind the Scenes: Recording Session</h4>
+                            <p class="text-gray-600 dark:text-gray-400 text-sm">Abbey Road Studios • 2023</p>
+                        </div>
+                    </div>
+                </div>
 
-			<!-- Main -->
-				<div class="wrapper style2">
+                <div class="text-center mt-10">
+                    <button class="px-6 py-3 bg-transparent border-2 border-accent text-accent font-medium rounded-full hover:bg-accent hover:text-white transition duration-300">
+                        View All Videos
+                    </button>
+                </div>
+            </div>
 
-					<article id="main" class="container special">
-						<a href="#" class="image featured"><img src="images/pic06.jpg" alt="" /></a>
-						<header>
-							<h2><a href="#">Sed massa imperdiet magnis</a></h2>
-							<p>
-								Sociis aenean eu aenean mollis mollis facilisis primis ornare penatibus aenean. Cursus ac enim
-								pulvinar curabitur morbi convallis. Lectus malesuada sed fermentum dolore amet.
-							</p>
-						</header>
-						<p>
-							Commodo id natoque malesuada sollicitudin elit suscipit. Curae suspendisse mauris posuere accumsan massa
-							posuere lacus convallis tellus interdum. Amet nullam fringilla nibh nulla convallis ut venenatis purus
-							sit arcu sociis. Nunc fermentum adipiscing tempor cursus nascetur adipiscing adipiscing. Primis aliquam
-							mus lacinia lobortis phasellus suscipit. Fermentum lobortis non tristique ante proin sociis accumsan
-							lobortis. Auctor etiam porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum
-							consequat integer interdum integer purus sapien. Nibh eleifend nulla nascetur pharetra commodo mi augue
-							interdum tellus. Ornare cursus augue feugiat sodales velit lorem. Semper elementum ullamcorper lacinia
-							natoque aenean scelerisque.
-						</p>
-						<footer>
-							<a href="#" class="button">Continue Reading</a>
-						</footer>
-					</article>
+            <!-- Discography -->
+            <div class="mt-20 animate-on-scroll">
+                <h3 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-8">Discography</h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+                    <div class="text-center">
+                        <div class="album-cover mb-4 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                            <img src="https://m.media-amazon.com/images/I/81o+ls+1FPL._SL1500_.jpg" alt="Nocturnes" class="w-full h-auto transition duration-500 hover:scale-105">
+                        </div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white">Nocturnes (2023)</h4>
+                    </div>
+                    <div class="text-center">
+                        <div class="album-cover mb-4 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                            <img src="https://m.media-amazon.com/images/I/91lw7ZtB2yL._SL1500_.jpg" alt="Bach: The Cello Suites" class="w-full h-auto transition duration-500 hover:scale-105">
+                        </div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white">Bach: The Cello Suites (2022)</h4>
+                    </div>
+                    <div class="text-center">
+                        <div class="album-cover mb-4 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                            <img src="https://m.media-amazon.com/images/I/81Vw9qK+7gL._SL1500_.jpg" alt="Vienna Nocturne" class="w-full h-auto transition duration-500 hover:scale-105">
+                        </div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white">Vienna Nocturne (2021)</h4>
+                    </div>
+                    <div class="text-center">
+                        <div class="album-cover mb-4 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                            <img src="https://m.media-amazon.com/images/I/81k7A+6aA8L._SL1500_.jpg" alt="Russian Soul" class="w-full h-auto transition duration-500 hover:scale-105">
+                        </div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white">Russian Soul (2020)</h4>
+                    </div>
+                    <div class="text-center">
+                        <div class="album-cover mb-4 overflow-hidden rounded-lg shadow-md cursor-pointer">
+                            <img src="https://m.media-amazon.com/images/I/91T4+0u+y4L._SL1500_.jpg" alt="First Position" class="w-full h-auto transition duration-500 hover:scale-105">
+                        </div>
+                        <h4 class="font-semibold text-gray-800 dark:text-white">First Position (2019)</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-				</div>
+    <!-- Concerts & Events -->
+    <section id="concerts" class="py-20 bg-gray-50 dark:bg-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Concerts & Events</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-12"></div>
+            </div>
 
-			<!-- Features -->
-				<div class="wrapper style1">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+                <div class="animate-on-scroll">
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center lg:text-left">Upcoming Performances</h3>
 
-					<section id="features" class="container special">
-						<header>
-							<h2>Morbi ullamcorper et varius leo lacus</h2>
-							<p>Ipsum volutpat consectetur orci metus consequat imperdiet duis integer semper magna.</p>
-						</header>
-						<div class="row">
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic07.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Gravida aliquam penatibus</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic08.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Sed quis rhoncus placerat</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-							<article class="col-4 col-12-mobile special">
-								<a href="#" class="image featured"><img src="images/pic09.jpg" alt="" /></a>
-								<header>
-									<h3><a href="#">Magna laoreet et aliquam</a></h3>
-								</header>
-								<p>
-									Amet nullam fringilla nibh nulla convallis tique ante proin sociis accumsan lobortis. Auctor etiam
-									porttitor phasellus tempus cubilia ultrices tempor sagittis. Nisl fermentum consequat integer interdum.
-								</p>
-							</article>
-						</div>
-					</section>
+                    <div class="space-y-6">
+                        <div class="event-card bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                            <div class="flex items-start">
+                                <div class="mr-4 text-center">
+                                    <div class="bg-accent text-white rounded-lg p-3">
+                                        <div class="text-xl font-bold">15</div>
+                                        <div class="text-xs uppercase">June</div>
+                                        <div class="text-xs mt-1">2025</div>
+                                    </div>
+                                </div>
+                                <div class="flex-grow">
+                                    <h4 class="font-bold text-lg text-gray-800 dark:text-white">Vienna Philharmonic Summer Night Concert</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-2">Schönbrunn Palace, Vienna • 8:30 PM</p>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Performing Elgar's Cello Concerto with guest conductor Yannick Nézet-Séguin</p>
+                                    <div class="mt-4 flex justify-between items-center">
+                                        <a href="#" class="text-accent hover:underline text-sm">View Details</a>
+                                        <button class="px-4 py-2 bg-accent text-white rounded-full text-sm hover:bg-accent/90">Get Tickets</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-				</div>
+                        <div class="event-card bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                            <div class="flex items-start">
+                                <div class="mr-4 text-center">
+                                    <div class="bg-accent text-white rounded-lg p-3">
+                                        <div class="text-xl font-bold">22</div>
+                                        <div class="text-xs uppercase">July</div>
+                                        <div class="text-xs mt-1">2025</div>
+                                    </div>
+                                </div>
+                                <div class="flex-grow">
+                                    <h4 class="font-bold text-lg text-gray-800 dark:text-white">Salzburg Festival Opening</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-2">Großes Festspielhaus, Salzburg • 7:00 PM</p>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Featured soloist in Haydn's Cello Concerto No.1 with the Vienna Symphony</p>
+                                    <div class="mt-4 flex justify-between items-center">
+                                        <a href="#" class="text-accent hover:underline text-sm">View Details</a>
+                                        <button class="px-4 py-2 bg-accent text-white rounded-full text-sm hover:bg-accent/90">Get Tickets</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 
-			<!-- Footer -->
-				<div id="footer">
-					<div class="container">
-						<div class="row">
+                        <div class="event-card bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
+                            <div class="flex items-start">
+                                <div class="mr-4 text-center">
+                                    <div class="bg-accent text-white rounded-lg p-3">
+                                        <div class="text-xl font-bold">5</div>
+                                        <div class="text-xs uppercase">Sept</div>
+                                        <div class="text-xs mt-1">2025</div>
+                                    </div>
+                                </div>
+                                <div class="flex-grow">
+                                    <h4 class="font-bold text-lg text-gray-800 dark:text-white">Bach Cello Suites Tour</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 mb-2">Royal Albert Hall, London • 6:30 PM</p>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Complete performance of all six Bach Cello Suites in one evening</p>
+                                    <div class="mt-4 flex justify-between items-center">
+                                        <a href="#" class="text-accent hover:underline text-sm">View Details</a>
+                                        <button class="px-4 py-2 bg-accent text-white rounded-full text-sm hover:bg-accent/90">Get Tickets</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-							<!-- Tweets -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon brands fa-twitter circled"><span class="label">Tweets</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="tweet">
-												Amet nullam fringilla nibh nulla convallis tique ante sociis accumsan.
-												<span class="timestamp">5 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Hendrerit rutrum quisque.
-												<span class="timestamp">30 minutes ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Curabitur donec nulla massa laoreet nibh. Lorem praesent montes.
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="tweet">
-												Lacus natoque cras rhoncus curae dignissim ultricies. Convallis orci aliquet.
-												<span class="timestamp">5 hours ago</span>
-											</article>
-										</li>
-									</ul>
-								</section>
+                    <div class="text-center mt-8">
+                        <button class="px-6 py-3 bg-transparent border-2 border-accent text-accent font-medium rounded-full hover:bg-accent hover:text-white transition duration-300">
+                            View All Concerts
+                        </button>
+                    </div>
+                </div>
 
-							<!-- Posts -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-file circled"><span class="label">Posts</span></h2>
-									</header>
-									<ul class="divided">
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Nisl fermentum integer</a></h3>
-												</header>
-												<span class="timestamp">3 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Phasellus portitor lorem</a></h3>
-												</header>
-												<span class="timestamp">6 hours ago</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Magna tempus consequat</a></h3>
-												</header>
-												<span class="timestamp">Yesterday</span>
-											</article>
-										</li>
-										<li>
-											<article class="post stub">
-												<header>
-													<h3><a href="#">Feugiat lorem ipsum</a></h3>
-												</header>
-												<span class="timestamp">2 days ago</span>
-											</article>
-										</li>
-									</ul>
-								</section>
+                <div class="animate-on-scroll">
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center lg:text-left">Tour Calendar</h3>
+                    <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-6">
+                                <h4 class="font-bold text-lg text-gray-800 dark:text-white">June 2025</h4>
+                                <div class="flex space-x-2">
+                                    <button class="p-2 rounded-full bg-gray-100 dark:bg-gray-600">
+                                        <i class="fas fa-chevron-left text-gray-700 dark:text-white"></i>
+                                    </button>
+                                    <button class="p-2 rounded-full bg-gray-100 dark:bg-gray-600">
+                                        <i class="fas fa-chevron-right text-gray-700 dark:text-white"></i>
+                                    </button>
+                                </div>
+                            </div>
 
-							<!-- Photos -->
-								<section class="col-4 col-12-mobile">
-									<header>
-										<h2 class="icon solid fa-camera circled"><span class="label">Photos</span></h2>
-									</header>
-									<div class="row gtr-25">
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic10.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic11.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic12.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic13.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic14.jpg" alt="" /></a>
-										</div>
-										<div class="col-6">
-											<a href="#" class="image fit"><img src="images/pic15.jpg" alt="" /></a>
-										</div>
-									</div>
-								</section>
+                            <div class="grid grid-cols-7 gap-2 mb-4">
+                                <div class="text-center text-xs font-medium text-gray-500 dark:text-gray-400">Sun</div>
+                                <div class="text-center text-xs font-medium text-gray-500 dark:text-gray-400">Mon</div>
+                                <div class="text-center text-xs font-medium text-gray-500 dark:text-gray-400">Tue</div>
+                                <div class="text-center text-xs font-medium text-gray-500 dark:text-gray-400">Wed</div>
+                                <div class="text-center text-xs font-medium text-gray-500 dark:text-gray-400">Thu</div>
+                                <div class="text-center text-xs font-medium text-gray-500 dark:text-gray-400">Fri</div>
+                                <div class="text-center text-xs font-medium text-gray-500 dark:text-gray-400">Sat</div>
+                            </div>
 
-						</div>
-						<hr />
-						<div class="row">
-							<div class="col-12">
+                            <div class="grid grid-cols-7 gap-2">
+                                <div class="text-center p-2 text-gray-400 dark:text-gray-500 text-sm">25</div>
+                                <div class="text-center p-2 text-gray-400 dark:text-gray-500 text-sm">26</div>
+                                <div class="text-center p-2 text-gray-400 dark:text-gray-500 text-sm">27</div>
+                                <div class="text-center p-2 text-gray-400 dark:text-gray-500 text-sm">28</div>
+                                <div class="text-center p-2 text-gray-400 dark:text-gray-500 text-sm">29</div>
+                                <div class="text-center p-2 text-gray-400 dark:text-gray-500 text-sm">30</div>
+                                <div class="text-center p-2 text-gray-400 dark:text-gray-500 text-sm">31</div>
+                                <div class="text-center p-2">1</div>
+                                <div class="text-center p-2">2</div>
+                                <div class="text-center p-2">3</div>
+                                <div class="text-center p-2">4</div>
+                                <div class="text-center p-2">5</div>
+                                <div class="text-center p-2 rounded-full bg-gray-200 dark:bg-gray-600">6</div>
+                                <div class="text-center p-2">7</div>
+                                <div class="text-center p-2">8</div>
+                                <div class="text-center p-2">9</div>
+                                <div class="text-center p-2">10</div>
+                                <div class="text-center p-2">11</div>
+                                <div class="text-center p-2">12</div>
+                                <div class="text-center p-2">13</div>
+                                <div class="text-center p-2">14</div>
+                                <div class="text-center p-2 font-bold text-white bg-accent rounded-full hover:cursor-pointer">15</div>
+                                <div class="text-center p-2">16</div>
+                                <div class="text-center p-2">17</div>
+                                <div class="text-center p-2">18</div>
+                                <div class="text-center p-2">19</div>
+                                <div class="text-center p-2">20</div>
+                                <div class="text-center p-2">21</div>
+                                <div class="text-center p-2 font-bold text-white bg-accent rounded-full hover:cursor-pointer">22</div>
+                                <div class="text-center p-2">23</div>
+                                <div class="text-center p-2">24</div>
+                                <div class="text-center p-2">25</div>
+                                <div class="text-center p-2">26</div>
+                                <div class="text-center p-2">27</div>
+                                <div class="text-center p-2">28</div>
+                                <div class="text-center p-2">29</div>
+                                <div class="text-center p-2">30</div>
+                                <div class="text-center p-2 font-bold bg-gray-200 dark:bg-gray-600 rounded-full">1</div>
+                                <div class="text-center p-2 font-bold bg-gray-200 dark:bg-gray-600 rounded-full">2</div>
+                                <div class="text-center p-2 font-bold bg-gray-200 dark:bg-gray-600 rounded-full">3</div>
+                            </div>
+                        </div>
 
-								<!-- Contact -->
-									<section class="contact">
-										<header>
-											<h3>Nisl turpis nascetur interdum?</h3>
-										</header>
-										<p>Urna nisl non quis interdum mus ornare ridiculus egestas ridiculus lobortis vivamus tempor aliquet.</p>
-										<ul class="icons">
-											<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-											<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-											<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-											<li><a href="#" class="icon brands fa-pinterest"><span class="label">Pinterest</span></a></li>
-											<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-											<li><a href="#" class="icon brands fa-linkedin-in"><span class="label">Linkedin</span></a></li>
-										</ul>
-									</section>
+                        <div class="bg-gray-100 dark:bg-gray-600 p-4">
+                            <div class="flex items-center">
+                                <div class="w-3 h-3 rounded-full bg-accent mr-2"></div>
+                                <span class="text-sm text-gray-700 dark:text-gray-300">Performance Day</span>
+                            </div>
+                        </div>
+                    </div>
 
-								<!-- Copyright -->
-									<div class="copyright">
-										<ul class="menu">
-											<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-										</ul>
-									</div>
+                    <div class="mt-8 animate-on-scroll">
+                        <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6 text-center lg:text-left">Tour Locations</h3>
+                        <div class="bg-white dark:bg-gray-700 rounded-xl shadow-lg overflow-hidden">
+                            <div class="h-64" id="map">
+                                <!-- Map would be implemented with Google Maps API in a real implementation -->
+                                <img src="https://maps.googleapis.com/maps/api/staticmap?center=Europe&zoom=4&size=600x400&maptype=roadmap&markers=color:red%7C48.2082,16.3738%7C47.8095,13.0550%7C51.5014,-0.1419&key=YOUR_API_KEY" alt="Tour Map" class="w-full h-full object-cover">
+                            </div>
+                            <div class="p-4">
+                                <p class="text-gray-600 dark:text-gray-300 text-sm">Experience Bernadette's performances at the world's most prestigious concert halls.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-							</div>
+    <!-- Masterclasses & Lessons -->
+    <section id="lessons" class="py-20 bg-white dark:bg-gray-900">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll">
+                <h2 class="text-4xl font-bold text-gray-900 dark:text-white mb-4">Masterclasses & Lessons</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-12"></div>
+            </div>
 
-						</div>
-					</div>
-				</div>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="animate-on-scroll">
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Private Instruction</h3>
+                    <p class="text-gray-600 dark:text-gray-300 mb-6">Bernadette offers personalized cello instruction for students of all levels, from beginners to advanced performers seeking competition and audition preparation.</p>
 
-		</div>
+                    <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 mb-8">
+                        <h4 class="font-bold text-xl text-gray-800 dark:text-white mb-3">Instruction Options</h4>
+                        <div class="space-y-4">
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-700 dark:text-gray-300 font-medium">Individual Lessons (60/90 min)</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Tailored one-on-one instruction in technique, repertoire, and performance practice.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-700 dark:text-gray-300 font-medium">Masterclasses (Small Groups)</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Ideal for students preparing for competitions or auditions, with peer observation.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-700 dark:text-gray-300 font-medium">Workshop Series</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Specialized sessions focusing on Bach interpretation, extended techniques, and more.</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <div class="flex-shrink-0 mt-1">
+                                    <div class="w-6 h-6 rounded-full bg-accent flex items-center justify-center">
+                                        <i class="fas fa-check text-white text-xs"></i>
+                                    </div>
+                                </div>
+                                <div class="ml-3">
+                                    <p class="text-gray-700 dark:text-gray-300 font-medium">Online Lessons</p>
+                                    <p class="text-gray-600 dark:text-gray-400 text-sm">Remote instruction via high-quality video conferencing for international students.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.dropotron.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                        <div class="bg-accent rounded-xl p-6 shadow-lg">
+                            <h4 class="font-bold text-xl text-white mb-2">Summer Intensive</h4>
+                            <p class="text-white/90 text-sm mb-3">Join my annual 5-day summer program with daily private lessons, masterclasses, and performance opportunities.</p>
+                            <button class="px-4 py-2 bg-white text-accent rounded-full text-sm font-medium hover:bg-gray-100">Learn More</button>
+                        </div>
+                        <div class="bg-gray-800 rounded-xl p-6 shadow-lg dark:bg-gray-700">
+                            <h4 class="font-bold text-xl text-white mb-2">Youth Program</h4>
+                            <p class="text-white/90 text-sm mb-3">Special classes for young cellists aged 8-16 with group lessons and fun musical activities.</p>
+                            <button class="px-4 py-2 bg-accent text-white rounded-full text-sm font-medium hover:bg-accent/90">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <h3 class="text-3xl font-bold text-gray-800 dark:text-white mb-6">Student Testimonials</h3>
+
+                    <div class="space-y-6">
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                    <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Student" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white">Bernadette König</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Conservatory Student, Vienna</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">"Bernadette's teaching transformed my approach to the cello. Her attention to detail and profound musical insight helped me win my first competition. I couldn't have done it without her guidance!"</p>
+                            <div class="flex mt-3">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                    <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="Student" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white">Thomas Moreau</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Professional Cellist, Paris</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">"After just one lesson with Bernadette, I understood bow technique in a completely new way. Her ability to diagnose and solve technical problems is unparalleled. My playing has improved dramatically."</p>
+                            <div class="flex mt-3">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-6">
+                            <div class="flex items-center mb-4">
+                                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                                    <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Student" class="w-full h-full object-cover">
+                                </div>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 dark:text-white">Yuki Tanaka</h4>
+                                    <p class="text-gray-600 dark:text-gray-300 text-sm">Music Student, Tokyo</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600 dark:text-gray-300">"The online lessons with Bernadette have been incredible. Despite being halfway across the world, she makes me feel like we're in the same room. Her virtual teaching setup is flawless and highly effective."</p>
+                            <div class="flex mt-3">
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                                <i class="fas fa-star text-yellow-400"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-16 bg-gray-50 dark:bg-gray-800 rounded-2xl shadow-xl p-8 animate-on-scroll">
+                <div class="max-w-4xl mx-auto">
+                    <h3 class="text-3xl font-bold text-center text-gray-800 dark:text-white mb-4">Ready to Begin Your Musical Journey?</h3>
+                    <p class="text-center text-gray-600 dark:text-gray-300 mb-8">Schedule a consultation lesson to discuss your goals and develop a personalized learning plan.</p>
+
+                    <div class="max-w-md mx-auto">
+                        <form>
+                            <div class="mb-4">
+                                <label for="name" class="block text-gray-700 dark:text-gray-300 mb-2">Full Name</label>
+                                <input type="text" id="name" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="email" class="block text-gray-700 dark:text-gray-300 mb-2">Email Address</label>
+                                <input type="email" id="email" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            <div class="mb-4">
+                                <label for="level" class="block text-gray-700 dark:text-gray-300 mb-2">Current Level</label>
+                                <select id="level" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-accent">
+                                    <option value="">Select your level</option>
+                                    <option value="beginner">Beginner (0-2 years)</option>
+                                    <option value="intermediate">Intermediate (2-5 years)</option>
+                                    <option value="advanced">Advanced (5+ years)</option>
+                                    <option value="professional">Professional</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="message" class="block text-gray-700 dark:text-gray-300 mb-2">Your Musical Goals</label>
+                                <textarea id="message" rows="4" class="w-full px-4 py-2 rounded-lg border border-gray-300 dark:border-gray-600 dark:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                            </div>
+                            <button type="submit" class="w-full px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition duration-300">Request Lesson Consultation</button>
+                        </form>
+                    </div>
+
+                    <div class="text-center mt-6">
+                        <p class="text-sm text-gray-500 dark:text-gray-400">A response will be sent within 24 hours.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center animate-on-scroll">
+                <h2 class="text-4xl font-bold text-white mb-4">Get In Touch</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mb-12"></div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <div class="animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-white mb-6">Contact Bernadette</h3>
+                    <p class="text-gray-300 mb-8">For concert bookings, masterclass inquiries, or general questions, please use the contact form or reach out directly via email or phone.</p>
+
+                    <div class="space-y-6 mb-8">
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-accent/20 p-3 rounded-lg">
+                                <i class="fas fa-envelope text-accent text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-white mb-1">Email</h4>
+                                <a href="mailto:Bernadette@example.com" class="text-gray-300 hover:text-accent transition duration-300">Bernadette@example.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-accent/20 p-3 rounded-lg">
+                                <i class="fas fa-phone-alt text-accent text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-white mb-1">Phone</h4>
+                                <a href="tel:+1234567890" class="text-gray-300 hover:text-accent transition duration-300">+1 (234) 567-890</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-accent/20 p-3 rounded-lg">
+                                <i class="fas fa-map-marker-alt text-accent text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-white mb-1">Location</h4>
+                                <p class="text-gray-300">Vienna, Austria • Available worldwide</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start">
+                            <div class="flex-shrink-0 bg-accent/20 p-3 rounded-lg">
+                                <i class="fas fa-clock text-accent text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <h4 class="font-bold text-white mb-1">Response Time</h4>
+                                <p class="text-gray-300">Typically within 24-48 hours</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <h4 class="font-bold text-white mb-3">Connect on Social Media</h4>
+                        <div class="flex space-x-4">
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-accent transition duration-300">
+                                <i class="fab fa-instagram text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-600 transition duration-300">
+                                <i class="fab fa-facebook-f text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-400 transition duration-300">
+                                <i class="fab fa-twitter text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-red-600 transition duration-300">
+                                <i class="fab fa-youtube text-white"></i>
+                            </a>
+                            <a href="#" class="w-10 h-10 bg-gray-700 rounded-full flex items-center justify-center hover:bg-blue-500 transition duration-300">
+                                <i class="fab fa-linkedin-in text-white"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold text-white mb-3">Press & Media</h4>
+                        <p class="text-gray-300 mb-4">For press inquiries, interview requests, or high-resolution photos, please contact:</p>
+                        <a href="mailto:press@example.com" class="text-accent hover:underline">press@example.com</a>
+                    </div>
+                </div>
+
+                <div class="animate-on-scroll">
+                    <h3 class="text-2xl font-bold text-white mb-6">Send a Message</h3>
+                    <form>
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+                            <div>
+                                <label for="contact-name" class="block text-gray-300 mb-2">Name</label>
+                                <input type="text" id="contact-name" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                            <div>
+                                <label for="contact-email" class="block text-gray-300 mb-2">Email</label>
+                                <input type="email" id="contact-email" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent">
+                            </div>
+                        </div>
+                        <div class="mb-4">
+                            <label for="contact-subject" class="block text-gray-300 mb-2">Subject</label>
+                            <input type="text" id="contact-subject" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent">
+                        </div>
+                        <div class="mb-6">
+                            <label for="contact-message" class="block text-gray-300 mb-2">Message</label>
+                            <textarea id="contact-message" rows="5" class="w-full px-4 py-2 rounded-lg bg-gray-800 border border-gray-700 focus:outline-none focus:ring-2 focus:ring-accent"></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-3 bg-accent text-white rounded-full font-medium hover:bg-accent/90 transition duration-300">Send Message</button>
+                    </form>
+
+                    <div class="mt-8">
+                        <h4 class="font-bold text-white mb-3">Booking Request</h4>
+                        <p class="text-gray-300 mb-4">For concert or masterclass booking inquiries, please use our official booking form to ensure prompt response.</p>
+                        <button class="px-6 py-2 bg-transparent border-2 border-accent text-white font-medium rounded-full hover:bg-accent hover:text-white transition duration-300">
+                            Go to Booking Form
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-white font-bold text-xl mb-4">Bernadette König</h3>
+                    <p class="mb-4">Passion. Precision. Perfection. Celebrating the transformative power of music.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition duration-300">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Navigation</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="hover:text-white transition duration-300">Home</a></li>
+                        <li><a href="#about" class="hover:text-white transition duration-300">About</a></li>
+                        <li><a href="#music" class="hover:text-white transition duration-300">Music</a></li>
+                        <li><a href="#concerts" class="hover:text-white transition duration-300">Concerts</a></li>
+                        <li><a href="#lessons" class="hover:text-white transition duration-300">Lessons</a></li>
+                        <li><a href="#contact" class="hover:text-white transition duration-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition duration-300">Press Kit</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Upcoming Events</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Teaching Philosophy</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Repertoire List</a></li>
+                        <li><a href="#" class="hover:text-white transition duration-300">Privacy Policy</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Newsletter</h4>
+                    <p class="mb-4">Subscribe to receive updates on concerts, new releases, and special events.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg w-full focus:outline-none text-gray-900">
+                        <button type="submit" class="bg-accent text-white px-4 py-2 rounded-r-lg hover:bg-accent/90 transition duration-300">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-gray-400 mb-4 md:mb-0">© 2025 Bernadette König. All rights reserved.</p>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition duration-300">Terms of Service</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition duration-300">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white transition duration-300">Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Chatbot -->
+    <div class="chatbot-container">
+        <div class="chatbot-window" id="chatbot-window">
+            <div class="chatbot-header">
+                <h4 class="font-bold">Bernadette's Assistant</h4>
+                <p class="text-xs">How can I help you today?</p>
+            </div>
+            <div class="chatbot-messages" id="chat-messages">
+                <div class="mb-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 max-w-xs">
+                        <p class="text-sm">Hello! I'm Bernadette's virtual assistant. How can I help you today? Here are some common questions:</p>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <div class="bg-gray-100 dark:bg-gray-700 rounded-lg p-3 max-w-xs">
+                        <p class="text-sm font-medium mb-1">• Upcoming concert dates</p>
+                        <p class="text-sm font-medium mb-1">• Booking private lessons</p>
+                        <p class="text-sm font-medium">• Purchasing sheet music</p>
+                    </div>
+                </div>
+            </div>
+            <div class="chatbot-input">
+                <div class="flex">
+                    <input type="text" placeholder="Type your message..." class="flex-grow px-4 py-2 rounded-l-lg focus:outline-none bg-gray-100 dark:bg-gray-700">
+                    <button class="bg-accent text-white px-4 py-2 rounded-r-lg hover:bg-accent/90">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="chatbot-button" id="chatbot-button">
+            <i class="fas fa-comments text-xl"></i>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" class="fixed bottom-6 right-6 md:right-32 bg-accent text-white w-12 h-12 rounded-full shadow-lg flex items-center justify-center hidden">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- Link to your JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
 
 	</body>
 </html>
